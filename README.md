@@ -1,6 +1,6 @@
 # LeetCode Solutions
 
-This repository contains my personal solutions to LeetCode problems in Java.
+This repository contains solutions to LeetCode problems in Java.
 
  🗂️ Structure
 

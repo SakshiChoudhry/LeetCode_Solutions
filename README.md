@@ -9,4 +9,4 @@ Solutions are organized by difficulty:
 - `Medium/`
 - `Hard/`
 
-Each file is named as: <ProblemNumber>-<ProblemName>.java
+Each file is named as: "ProblemNumber"-"ProblemName".java

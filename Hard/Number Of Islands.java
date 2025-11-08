@@ -2,8 +2,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 class Islands{
-    public void bfs(int i,int j,char[][] grid, int[][] visited, Queue<int[]> q,int n,int m)
+    public void bfs(int i,int j,char[][] grid, int[][] visited,int n,int m)
     {
+        Queue<int[]> q=new LinkedList<>();
         int[] dirx={-1,-1,-1,0,1,1,1,0};
         int [] diry={-1,0,1,1,1,0,-1,-1};
         q.offer(new int[]{i,j});
@@ -15,7 +16,7 @@ class Islands{
             {
                int a=x[0]+dirx[z];
                int b=x[1]+diry[z];
-               if(a>=0 && b>=0 && a<n && b<m && visited[a][b]==0 && grid[a][b]==1)
+               if(a>=0 && b>=0 && a<n && b<m && visited[a][b]==0 && grid[a][b]=='1')
                {
                    q.offer(new int[]{a,b});
                    visited[a][b]=1;
@@ -27,17 +28,16 @@ class Islands{
     {
         int n =grid.length;
         int m=grid[0].length;
-        Queue<int[]> q=new LinkedList<>();
         int[][] visited=new int[n][m];
         int count=0;
         for(int i=0;i<n;i++)
         {
             for(int j=0;j<m;j++)
             {
-                if(visited[i][j]==0 && grid[i][j]==1)
+                if(visited[i][j]==0 && grid[i][j]=='1')
                 {
                     count++;
-                    bfs(i,j,grid,visited,q,n,m);
+                    bfs(i,j,grid,visited,n,m);
                 }
             }
         }
